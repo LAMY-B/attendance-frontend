@@ -29,7 +29,7 @@ export default function AttendanceTable({
 
       const res =
         await axios.get(
-          "https://attendance-backend-e2rf.onrender.com"
+          "https://attendance-backend-e2rf.onrender.com/api/students"
         )
 
       const formatted =
@@ -91,7 +91,7 @@ export default function AttendanceTable({
     try {
 
       await axios.put(
-        `https://attendance-backend-e2rf.onrender.com/${student._id}`,
+        `https://attendance-backend-e2rf.onrender.com/api/students/${student._id}`,
         {
           studentId: student.id,
           name: student.name,
